@@ -1,7 +1,7 @@
 {
   "root": {
     "src": "./src",
-    "dest": "./public"
+    "dest": "./static"
   },
 
   "tasks": {
@@ -50,17 +50,6 @@
         ]
       },
       "extensions": ["sass", "scss", "css"]
-    },
-
-    "html": {
-      "src": "html",
-      "dest": "./",
-      "dataFile": "data/global.json",
-      "htmlmin": {
-        "collapseWhitespace": true
-      },
-      "extensions": ["html", "json"],
-      "excludeFolders": ["layouts", "shared", "macros", "data"]
     },
 
     "images": {

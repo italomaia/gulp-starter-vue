@@ -9,7 +9,6 @@ assetTasks = [
   'svgSprite'
 ]
 codeTasks = [
-  'html'
   'css'
   'js'
 ]

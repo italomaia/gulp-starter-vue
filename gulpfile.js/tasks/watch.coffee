@@ -9,7 +9,6 @@ watchTask = ->
     'iconFont'
     'images'
     'svgSprite'
-    'html'
     'css'
   ]
 
