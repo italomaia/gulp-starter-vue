@@ -27,7 +27,7 @@ module.exports = (env) ->
     module:
       loaders: [
         test: /\.vue$/
-        loader: 'vue'
+        loader: 'vue-loader'
         query: config.tasks.js.vue
       ,
         test: /\.js$/
@@ -37,7 +37,6 @@ module.exports = (env) ->
       ,
         test: /\.coffee$/
         loader: 'coffee-loader'
-        exclude: /node_modules/
         query: config.tasks.js.coffee
       ]
 
@@ -58,8 +57,8 @@ module.exports = (env) ->
     webpackConfig.entry = config.tasks.js.entries
 
     webpackConfig.output =
-      path: path.normalize(jsDest),
-      filename: filenamePattern,
+      path: path.normalize(jsDest)
+      filename: filenamePattern
       publicPath: publicPath
 
     if config.tasks.js.extractSharedJs

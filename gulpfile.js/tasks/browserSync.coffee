@@ -1,3 +1,4 @@
+# do not use browsersync in production
 if global.production
   return
 
