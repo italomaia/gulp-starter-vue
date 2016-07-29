@@ -16,7 +16,7 @@ module.exports = (env) ->
     (extension) -> ".#{extension}"
 
   rev = config.tasks.production.rev and env == 'production'
-  filenamePattern = if rev? then '[name]-[hash].js' else '[name].js'
+  filenamePattern = if rev then '[name]-[hash].js' else '[name].js'
 
   webpackConfig =
     context: jsSrc
