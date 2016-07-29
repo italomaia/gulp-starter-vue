@@ -20,11 +20,19 @@
       "src": "javascripts",
       "dest": "javascripts",
       "entries": {
-        "app": ["./app.js"]
+        "app": ["./main.coffee"]
       },
-      "extensions": ["js", "json"],
+      "extensions": ["js", "json", "coffee", "vue"],
       "babel": {
         "presets": ["es2015", "stage-1"],
+        "plugins": []
+      },
+      "coffee": {
+        "presets": [],
+        "plugins": []
+      },
+      "vue": {
+        "presets": [],
         "plugins": []
       },
       "extractSharedJs": false

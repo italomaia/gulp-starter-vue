@@ -26,10 +26,19 @@ module.exports = (env) ->
       extensions: [''].concat(extensions)
     module:
       loaders: [
-          test: /\.js$/
-          loader: 'babel-loader'
-          exclude: /node_modules/
-          query: config.tasks.js.babel
+        test: /\.vue$/
+        loader: 'vue'
+        query: config.tasks.js.vue
+      ,
+        test: /\.js$/
+        loader: 'babel-loader'
+        exclude: /node_modules/
+        query: config.tasks.js.babel
+      ,
+        test: /\.coffee$/
+        loader: 'coffee-loader'
+        exclude: /node_modules/
+        query: config.tasks.js.coffee
       ]
 
   if env == 'development'
