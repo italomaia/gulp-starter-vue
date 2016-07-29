@@ -16,6 +16,7 @@ codeTasks = [
 
 module.exports = (env) ->
   matchFilter = (task) ->
+    # if the configuration exists ...
     if config.tasks[task]
       if task == 'js'
         task = if env == 'production' then 'webpack:production' else false
@@ -24,14 +25,12 @@ module.exports = (env) ->
   exists = (value) -> not not value
 
   assetTasks:
-    compact(
+    compact \
       assetTasks
         .map matchFilter
         .filter exists
-    )
   codeTasks:
-    compact(
+    compact \
       codeTasks
         .map matchFilter
         .filter exists
-    )
