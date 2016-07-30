@@ -6,9 +6,9 @@
 
   "tasks": {
     "browserSync": {
+      "open": false,
       "server": {
-        "baseDir": "static",
-        "directory": true
+        "baseDir": "static"
       }
     },
 

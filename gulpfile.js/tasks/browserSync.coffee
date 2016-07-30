@@ -20,9 +20,10 @@ browserSyncTask = ->
   server = config.tasks.browserSync.proxy or config.tasks.browserSync.server
 
   server.middleware = [
+    # serves the js bundle from memory
     require('webpack-dev-middleware')(compiler,
       stats: 'errors-only'
-      publicPath: pathToUrl '/', webpackConfig.output.publicPath
+      publicPath: pathToUrl '/static/', webpackConfig.output.publicPath
     ),
     require('webpack-hot-middleware')(compiler)
   ]

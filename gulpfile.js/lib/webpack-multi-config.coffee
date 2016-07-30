@@ -21,6 +21,7 @@ module.exports = (env) ->
   webpackConfig =
     context: jsSrc
     plugins: []
+    target: 'web'  # use within an browser-like environment
     resolve:
       root: jsSrc
       extensions: [''].concat(extensions)
@@ -41,7 +42,7 @@ module.exports = (env) ->
       ]
 
   if env == 'development'
-    webpackConfig.devtool = 'inline-source-map'
+    webpackConfig.devtool = 'eval'
 
     # Create new entries object with webpack-hot-middleware added
     for key in config.tasks.js.entries
