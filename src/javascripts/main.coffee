@@ -1,4 +1,4 @@
-Vue = require 'vue'
+Vue = require './setup'
 App = require './App'
 
 new Vue
