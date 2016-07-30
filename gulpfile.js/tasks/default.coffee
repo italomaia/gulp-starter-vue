@@ -10,6 +10,7 @@ defaultTask = (cb) ->
     tasks.codeTasks,
     'static',
     'watch',
+    'browser',
     cb
 
 gulp.task 'default', defaultTask

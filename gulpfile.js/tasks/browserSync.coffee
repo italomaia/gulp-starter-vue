@@ -10,6 +10,7 @@ config            = require '../config'
 pathToUrl         = require '../lib/pathToUrl'
 
 browserSyncTask = ->
+  # get a development webpack compiler
   webpackConfig = webpackMutiConfig 'development'
   compiler = webpack webpackConfig
   proxyConfig = config.tasks.browserSync.proxy or null
@@ -23,7 +24,7 @@ browserSyncTask = ->
     # serves the js bundle from memory
     require('webpack-dev-middleware')(compiler,
       stats: 'errors-only'
-      publicPath: pathToUrl '/static/', webpackConfig.output.publicPath
+      publicPath: pathToUrl '/', webpackConfig.output.publicPath
     ),
     require('webpack-hot-middleware')(compiler)
   ]

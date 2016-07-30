@@ -1,20 +1,24 @@
 {
   "root": {
     "src": "./src",
-    "dest": "./static"
+    "dest": "./public"
   },
 
   "tasks": {
     "browserSync": {
       "open": false,
       "server": {
-        "baseDir": "static"
+        "baseDir": "public"
       }
     },
 
     "static": {
       "src": "static",
       "dest": "./"
+    },
+
+    "browser": {
+      "uri": "http://localhost:5000/"
     },
 
     "js": {
