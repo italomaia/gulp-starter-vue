@@ -46,6 +46,7 @@
     "gulp-imagemin": "^3.0.2",
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-render": "^2.0.0",
+    "gulp-open": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-rev": "^7.1.0",
     "gulp-rev-napkin": "^0.1.0",
@@ -87,6 +88,7 @@
   "license": "MIT",
   "dependencies": {
     "normalize.css": "^4.2.0",
-    "vue": "^1.0.26"
+    "vue": "^1.0.26",
+    "vue-router": "^0.7.13"
   }
 }
